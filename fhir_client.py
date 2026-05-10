@@ -36,7 +36,7 @@ print (f"{ FHIR_BASE_URL}, {USERNAME}, {PASSWORD}")
 
 def _basic_auth_header(username: str, password: str) -> str:
     token = f"{username}:{password}".encode("utf-8")
-    return "Basic" + base64.b64encode(token).decode("ascii")
+    return "Basic " + base64.b64encode(token).decode("ascii")
 
 HEADERS = {
     "Authorization": _basic_auth_header(USERNAME, PASSWORD),

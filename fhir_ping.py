@@ -19,7 +19,7 @@ def main() -> None:
     print("Pinging FHIR server using GET /metadata")
 
     metadata = get_resource("metadata", "")
-
+    
     fhir_version = metadata.get("fhirVersion", "unknown")
     print(f"FHIR Version: {fhir_version}")
 
